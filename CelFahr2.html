@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+	<meta charset="UTF-8"/> 
+	<title> Conversion Celsius/Fahrenheit</title> 
+	<style>
+		.c {
+			float:left;
+		}
+		p{
+			font-weight:bold;
+			text-align:center;
+		}	
+	</style>
+	<script type="text/javascript" >
+		function celToFahr(c){
+			return (9/5*c + 32);
+		}
+		
+		function fahrToCel(f){
+			return (5/9* (f - 32));
+		}
+	
+	</script>
+</head>  
+  <body>  
+   <form name="form1"> 
+	<div class="c">
+		<p>Celcius</p>
+		<input type="text" name="cel">
+	</div>
+ 	<div class="c"> 
+		<br/><br/>
+		<input value=" > " type="button" onClick="form1.fahr.value = celToFahr(form1.cel.value)" />  
+		<br/>
+	    <input value=" < " type="button" onClick="form1.cel.value =fahrToCel(form1.fahr.value)" />
+	</div>
+          
+	<div class="c">
+		<p>Fahrenheit</p>
+		 <input  type="text" name="fahr">  
+	
+   </form>  
+   </div>
+  </body>  
+</html> 
